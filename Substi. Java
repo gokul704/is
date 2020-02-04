@@ -1,0 +1,24 @@
+import java.util.*;
+public class Substi {
+public static void main(String args[])
+{
+	Scanner sc=new Scanner(System.in);
+	String str1="abcdefghijklmnopqrstuvwxyz";
+	String str2="qwertyuioplkjhgfdsazxcvbnm";	
+	System.out.println("enter plain text: ");
+	String in=sc.nextLine();
+    int n=in.length();
+	char[] ch=new  char[n];
+	int j;
+	char c;
+	for(int i=0;i<n;i++)
+	{
+		c=in.charAt(i);
+		j=str1.indexOf(c);
+		ch[i]=str2.charAt(j);
+	}
+	System.out.println("cipher text is : ");
+    for(int i=0;i<n;i++)
+	System.out.print(ch[i]);
+}
+}
